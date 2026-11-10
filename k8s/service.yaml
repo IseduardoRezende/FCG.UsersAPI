@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fcg-users-api
+  labels:
+    app: fcg-users-api
+spec:
+  type: ClusterIP
+  selector:
+    app: fcg-users-api
+  ports:
+    - port: 80
+      targetPort: 8080
